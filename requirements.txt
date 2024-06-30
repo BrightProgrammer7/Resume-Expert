@@ -211,7 +211,7 @@ opt-einsum==3.3.0
 optimum==1.19.1
 orjson==3.10.0
 overrides==7.4.0
-packaging==23.1
+packaging==23.2
 pandas==2.2.1
 pandocfilters==1.5.0
 parso==0.8.3
