@@ -92,3 +92,5 @@ ENV/
 .history/
 
 client_secret.json
+.streamlit/
+secrets.toml

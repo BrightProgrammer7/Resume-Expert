@@ -8,7 +8,10 @@ import pdf2image
 import google.generativeai as genai
 import base64
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
+# genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+# Fetch API key from Streamlit secrets
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
 def get_gemini_response(input,pdf_content,prompt):
     model=genai.GenerativeModel('models/gemini-1.5-pro-latest')
