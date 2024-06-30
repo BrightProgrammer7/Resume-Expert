@@ -192,7 +192,6 @@ multidict==6.0.5
 multiprocess==0.70.16
 munch==4.0.0
 mypy-extensions==1.0.0
-nb-conda-kernels==2.3.1
 nb_conda==2.2.1
 nbclassic==0.5.2
 nbclient==0.8.0
