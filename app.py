@@ -1,6 +1,5 @@
 import io
 from dotenv import load_dotenv
-load_dotenv()
 import streamlit as st
 import os
 from PIL import Image
@@ -8,10 +7,19 @@ import pdf2image
 import google.generativeai as genai
 import base64
 
+# Load environment variables from .env file
+load_dotenv()
 
-# genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+# Retrieve the API key from environment variables
+api_key = os.getenv("GOOGLE_API_KEY")
+
+if not api_key:
+    raise ValueError("No GOOGLE_API_KEY found in environment variables")
+
+# Configure the API key using the environment variable
+genai.configure(api_key=api_key)
 # Fetch API key from Streamlit secrets
-genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
+# genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
 def get_gemini_response(input,pdf_content,prompt):
     model=genai.GenerativeModel('models/gemini-1.5-pro-latest')
