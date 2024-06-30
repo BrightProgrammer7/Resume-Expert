@@ -90,3 +90,5 @@ ENV/
 .ropeproject
 .env.local
 .history/
+
+client_secret.json
