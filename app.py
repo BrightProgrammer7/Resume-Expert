@@ -1,5 +1,5 @@
 import io
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import streamlit as st
 import os
 from PIL import Image
@@ -8,7 +8,7 @@ import google.generativeai as genai
 import base64
 
 # Load environment variables from .env file
-load_dotenv()
+# load_dotenv()
 
 # Retrieve the API key from environment variables
 api_key = os.getenv("GOOGLE_API_KEY")
